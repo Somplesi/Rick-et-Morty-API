@@ -2,8 +2,8 @@
 //  APIHelper.swift
 //  Rick et Morty API
 //
-//  Created by Matthieu PASSEREL on 01/08/2018.
-//  Copyright © 2018 Matthieu PASSEREL. All rights reserved.
+//  Created by Rodolphe DUPUY on 07/10/2020.
+//  Copyright © 2020 Rodolphe DUPUY. All rights reserved.
 //
 
 import Foundation
