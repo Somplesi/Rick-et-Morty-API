@@ -7,14 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0887898621121EF600DA3183 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0887898521121EF600DA3183 /* SettingsController.swift */; };
+		088789882112208300DA3183 /* UserDefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088789872112208300DA3183 /* UserDefaultsHelper.swift */; };
 		08CCE2E72111985C00986E32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CCE2E62111985C00986E32 /* AppDelegate.swift */; };
 		08CCE2E92111985C00986E32 /* CharactersController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CCE2E82111985C00986E32 /* CharactersController.swift */; };
 		08CCE2EC2111985C00986E32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08CCE2EA2111985C00986E32 /* Main.storyboard */; };
 		08CCE2EE2111985D00986E32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08CCE2ED2111985D00986E32 /* Assets.xcassets */; };
 		08CCE2F12111985D00986E32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08CCE2EF2111985D00986E32 /* LaunchScreen.storyboard */; };
+		08CCE2FA21119A8200986E32 /* NavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CCE2F921119A8200986E32 /* NavController.swift */; };
+		08CCE2FD21119DF600986E32 /* APIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CCE2FC21119DF600986E32 /* APIHelper.swift */; };
+		08CCE2FF2111A16700986E32 /* APIResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CCE2FE2111A16700986E32 /* APIResult.swift */; };
+		08CCE3022111A8E900986E32 /* PersoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CCE3012111A8E900986E32 /* PersoCell.swift */; };
+		08CCE3042111A98100986E32 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CCE3032111A98100986E32 /* Extensions.swift */; };
+		08CCE3062111B10200986E32 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CCE3052111B10200986E32 /* DetailView.swift */; };
+		08CCE3082111B11500986E32 /* DetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08CCE3072111B11500986E32 /* DetailView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0887898521121EF600DA3183 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
+		088789872112208300DA3183 /* UserDefaultsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsHelper.swift; sourceTree = "<group>"; };
 		08CCE2E32111985C00986E32 /* Rick et Morty API.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rick et Morty API.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		08CCE2E62111985C00986E32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08CCE2E82111985C00986E32 /* CharactersController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersController.swift; sourceTree = "<group>"; };
@@ -22,6 +33,13 @@
 		08CCE2ED2111985D00986E32 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		08CCE2F02111985D00986E32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		08CCE2F22111985D00986E32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		08CCE2F921119A8200986E32 /* NavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavController.swift; sourceTree = "<group>"; };
+		08CCE2FC21119DF600986E32 /* APIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHelper.swift; sourceTree = "<group>"; };
+		08CCE2FE2111A16700986E32 /* APIResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResult.swift; sourceTree = "<group>"; };
+		08CCE3012111A8E900986E32 /* PersoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersoCell.swift; sourceTree = "<group>"; };
+		08CCE3032111A98100986E32 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		08CCE3052111B10200986E32 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		08CCE3072111B11500986E32 /* DetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +72,8 @@
 		08CCE2E52111985C00986E32 /* Rick et Morty API */ = {
 			isa = PBXGroup;
 			children = (
+				08CCE3002111A8CC00986E32 /* View */,
+				08CCE2FB21119DDF00986E32 /* Modele */,
 				08CCE2F821119A4C00986E32 /* Controller */,
 				08CCE2E62111985C00986E32 /* AppDelegate.swift */,
 				08CCE2EA2111985C00986E32 /* Main.storyboard */,
@@ -68,8 +88,31 @@
 			isa = PBXGroup;
 			children = (
 				08CCE2E82111985C00986E32 /* CharactersController.swift */,
+				08CCE2F921119A8200986E32 /* NavController.swift */,
+				0887898521121EF600DA3183 /* SettingsController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		08CCE2FB21119DDF00986E32 /* Modele */ = {
+			isa = PBXGroup;
+			children = (
+				08CCE2FC21119DF600986E32 /* APIHelper.swift */,
+				08CCE2FE2111A16700986E32 /* APIResult.swift */,
+				08CCE3032111A98100986E32 /* Extensions.swift */,
+				088789872112208300DA3183 /* UserDefaultsHelper.swift */,
+			);
+			path = Modele;
+			sourceTree = "<group>";
+		};
+		08CCE3002111A8CC00986E32 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				08CCE3012111A8E900986E32 /* PersoCell.swift */,
+				08CCE3072111B11500986E32 /* DetailView.xib */,
+				08CCE3052111B10200986E32 /* DetailView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,11 +142,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1000;
-				LastUpgradeCheck = 1000;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Matthieu PASSEREL";
 				TargetAttributes = {
 					08CCE2E22111985C00986E32 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1200;
 					};
 				};
 			};
@@ -131,6 +175,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				08CCE2F12111985D00986E32 /* LaunchScreen.storyboard in Resources */,
+				08CCE3082111B11500986E32 /* DetailView.xib in Resources */,
 				08CCE2EE2111985D00986E32 /* Assets.xcassets in Resources */,
 				08CCE2EC2111985C00986E32 /* Main.storyboard in Resources */,
 			);
@@ -143,8 +188,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				088789882112208300DA3183 /* UserDefaultsHelper.swift in Sources */,
+				0887898621121EF600DA3183 /* SettingsController.swift in Sources */,
+				08CCE2FD21119DF600986E32 /* APIHelper.swift in Sources */,
+				08CCE3062111B10200986E32 /* DetailView.swift in Sources */,
+				08CCE2FF2111A16700986E32 /* APIResult.swift in Sources */,
 				08CCE2E92111985C00986E32 /* CharactersController.swift in Sources */,
 				08CCE2E72111985C00986E32 /* AppDelegate.swift in Sources */,
+				08CCE2FA21119A8200986E32 /* NavController.swift in Sources */,
+				08CCE3022111A8E900986E32 /* PersoCell.swift in Sources */,
+				08CCE3042111A98100986E32 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,6 +249,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -257,6 +311,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -291,15 +346,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Q3T485N255;
+				DEVELOPMENT_TEAM = 3DZAHM87N2;
 				INFOPLIST_FILE = "Rick et Morty API/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.codabee.Rick-et-Morty-API";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.roddata.Rick-et-Morty-API";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -309,15 +364,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Q3T485N255;
+				DEVELOPMENT_TEAM = 3DZAHM87N2;
 				INFOPLIST_FILE = "Rick et Morty API/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.codabee.Rick-et-Morty-API";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.roddata.Rick-et-Morty-API";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
