@@ -34,40 +34,15 @@ class CharactersController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         collectionView.delegate = self
         collectionView.dataSource = self
+        
         getPerso(string: APIHelper().urlPersonnages, type: .all)
+        
         detailView.alpha = 0
         NotificationCenter.default.addObserver(self, selector: #selector(animateOut), name: Notification.Name("close"), object: nil)
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        pageSuivanteQuery = ""
-        personnagesQuery = []
-        getPerso(string: APIHelper().urlAvecParam(), type: .query)
-    }
-    
-    func animateIn(personnage: Personnage) {
-        detailImageFrame =  detailView.persoIV.convert(detailView.persoIV.bounds, to: view)
-        detailView.setup(personnage)
-        
-        imageDeTransition = UIImageView(frame: cellImageFram)
-        imageDeTransition.download(personnage.image)
-        imageDeTransition.layer.cornerRadius = 25
-        imageDeTransition.contentMode = .scaleAspectFill
-        imageDeTransition.clipsToBounds = true
-        view.addSubview(imageDeTransition)
-        
-        UIView.animate(withDuration: 0.5, animations: {
-            self.imageDeTransition.frame = self.detailImageFrame
-            self.imageDeTransition.layer.cornerRadius = self.detailImageFrame.height / 2
-            self.collectionView.alpha = 0
-        }) { (success) in
-            self.detailView.alpha = 1
-        }
-    }
-    
     @objc func animateOut() {
         UIView.animate(withDuration: 0.5, animations: {
             self.imageDeTransition.frame = self.cellImageFram
@@ -78,8 +53,23 @@ class CharactersController: UIViewController {
             self.imageDeTransition.removeFromSuperview()
         }
     }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        pageSuivanteQuery = ""
+        personnagesQuery = []
+        
+        getPerso(string: APIHelper().urlAvecParam(), type: .query)
+    }
+    
+    @IBAction func valueChanged(_ sender: UISegmentedControl) {
+        collectionView.reloadData()
+    }
+    
     
     func getPerso(string: String, type: TypeQuery) {
+        //print("Param: \(string)")
         APIHelper().getPersos(string) { (pageSuivante, listePersos, erreurString) in
             if pageSuivante != nil {
                 switch type {
@@ -104,12 +94,26 @@ class CharactersController: UIViewController {
         }
     }
     
-    
-    @IBAction func valueChanged(_ sender: UISegmentedControl) {
-        collectionView.reloadData()
+    func animateIn(personnage: Personnage) {
+        detailImageFrame =  detailView.persoIV.convert(detailView.persoIV.bounds, to: view)
+        detailView.setup(personnage)
+        
+        imageDeTransition = UIImageView(frame: cellImageFram)
+        imageDeTransition.download(personnage.image)
+        imageDeTransition.layer.cornerRadius = 25
+        imageDeTransition.contentMode = .scaleAspectFill
+        imageDeTransition.clipsToBounds = true
+        view.addSubview(imageDeTransition)
+        
+        UIView.animate(withDuration: 0.5, animations: {
+            self.imageDeTransition.frame = self.detailImageFrame
+            self.imageDeTransition.layer.cornerRadius = self.detailImageFrame.height / 2
+            self.collectionView.alpha = 0
+        }) { (success) in
+            self.detailView.alpha = 1
+        }
     }
-    
-    
+        
 }
 
 
@@ -164,9 +168,6 @@ extension CharactersController: UICollectionViewDelegate, UICollectionViewDataSo
         case 1: animateIn(personnage: personnagesQuery[indexPath.item])
         default: break
         }
-        
     }
     
-    
 }
-
